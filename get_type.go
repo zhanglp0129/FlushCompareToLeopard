@@ -42,7 +42,7 @@ func pokerSort(pokers []Poker) {
 		cur := pokers[i]
 		j := i - 1
 		for ; j >= 0; j-- {
-			if pokers[j].Size > pokers[i].Size {
+			if pokers[j].Size > cur.Size {
 				pokers[j+1] = pokers[j]
 			} else {
 				break
