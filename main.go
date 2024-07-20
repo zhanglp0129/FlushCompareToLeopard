@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"sync"
 )
 
@@ -14,16 +15,19 @@ var (
 
 func main() {
 	var count int
-	fmt.Print("请输入模拟次数(单位为万)：")
 	for {
-		_, err := fmt.Scan(&count)
-		if err != nil {
+		fmt.Print("请输入模拟次数(单位为万)：")
+		var s string
+		fmt.Scanln(&s)
+
+		c, err := strconv.Atoi(s)
+		if c == 0 && err != nil {
 			fmt.Println("输入错误，请重新输入！")
 		} else {
+			count = c * 10000
 			break
 		}
 	}
-	count *= 10000
 
 	// 创建100个协程，来模拟
 	goroutineCount := 100
