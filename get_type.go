@@ -14,8 +14,8 @@ const (
 	Leopard
 )
 
-// GetType 判断扑克牌的牌型
-func GetType(pokers []Poker) (PokerType, error) {
+// GetPokerType 判断扑克牌的牌型
+func GetPokerType(pokers []Poker) (PokerType, error) {
 	if len(pokers) != 3 {
 		return Other, errors.New("扑克牌的数量必须为3")
 	}
