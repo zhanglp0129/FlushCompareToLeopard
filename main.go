@@ -40,6 +40,7 @@ func main() {
 	// 暂停终端
 	fmt.Print("\n按回车键退出...")
 	fmt.Scanln()
+	fmt.Scanln()
 }
 
 // 运行模拟。需传入模拟次数，分别返回同花顺和豹子的次数
